@@ -8,7 +8,7 @@ import { faTypewriter } from '@fortawesome/pro-light-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core';
 
 function Content() {
-    const APIKey = 'rb7qkqxko58r3xrpiu4neqagjb9tmr82ycotkz8s5rr9y283j';
+    const APIKey = 'Your API key goes here';
 
     const ref = React.createRef();
 
