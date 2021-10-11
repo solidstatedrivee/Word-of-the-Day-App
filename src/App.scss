@@ -1,0 +1,71 @@
+//VARIABLES
+$dev-border: 1px solid red;
+$off-white: rgb(225, 225, 225);
+$container-background: rgba(255, 255, 255, 0.322);
+//MIXINS
+@mixin font($font-family, $font-file) {
+  @font-face {
+    font-family: $font-family;
+    src: url($font-file + ".ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+
+@mixin overlay() {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+@include font("Open Sans Bold", "./fonts/OpenSans-Bold");
+@include font("Open Sans Bold Italic", "./fonts/OpenSans-BoldItalic");
+@include font("Open Sans Extra Bold", "./fonts/OpenSans-ExtraBold");
+@include font(
+  "Open Sans Extra Bold Italic",
+  "./fonts/OpenSans-ExtraBoldItalic"
+);
+@include font("Open Sans Italic", "./fonts/OpenSans-Italic");
+@include font("Open Sans Light", "./fonts/OpenSans-Light");
+@include font("Open Sans Light Italic", "./fonts/OpenSans-LightItalic");
+@include font("Open Sans Regular", "./fonts/OpenSans-Regular");
+@include font("Open Sans Semi Bold", "./fonts/OpenSans-SemiBold");
+@include font("Open Sans Semi Bold Italic", "./fonts/OpenSans-SemiBoldItalic");
+
+//RULES
+body {
+  background: rgb(34, 34, 34);
+  color: rgb(235, 235, 235);
+}
+
+.app-container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  //   background: url("./images/camille-brodard-YigfmpAqK2A-unsplash.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.app-container:after {
+  @include overlay();
+}
+
+.app-title {
+  text-transform: capitalize;
+  display: inline-block;
+  font-family: Open Sans Extra Bold;
+  font-size: 4em;
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  transform: translate(-50%, -25%);
+  text-shadow: 10px 10px 5px rgba(0, 0, 0, 0.336);
+  position: relative;
+  z-index: 10;
+}

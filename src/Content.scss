@@ -1,0 +1,85 @@
+@import "App"; //refer to App.scss for style rules
+
+//RULES
+.app-content-container {
+  display: flex;
+  width: 60%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  max-height: 200px;
+}
+
+.word-of-the-day-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 0 20px;
+  border: 1px solid white;
+  border-radius: 5px;
+  background: $container-background;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.432);
+}
+
+.word-of-the-day-icon {
+  font-size: 3em;
+  color: $off-white;
+}
+
+.word-container {
+  padding: 0 15px;
+}
+
+.definition-container {
+  //   display: flex;
+  //   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid white;
+  border-radius: 5px;
+  background: $container-background;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.432);
+  width: 100%;
+  // max-height: 150px;
+}
+
+.scroll-overflow {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.definition-icon {
+  font-size: 3em;
+  color: $off-white;
+}
+
+.word {
+  font-family: Open Sans Bold;
+  font-size: 3.5em;
+  text-transform: capitalize;
+}
+
+.type-of-word {
+  font-family: Open Sans Italic;
+  font-size: 1.5em;
+  text-transform: capitalize;
+  text-align: center;
+  color: $off-white;
+}
+
+.definition-title {
+  text-align: center;
+  font-family: Open Sans Italic;
+  color: $off-white;
+}
+
+.definition {
+  font-family: Open Sans Light;
+  // text-transform: capitalize;
+  font-size: 1.25em;
+  padding: 0 15px;
+}
