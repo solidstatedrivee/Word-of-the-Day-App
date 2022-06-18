@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 
 function App() {
 
-  const unsplashAccessKey = 'Your key goes here';
+  const unsplashAccessKey = 'sK64f1nD7TO0SF_x9V1JprzeqhkfyVizHY9FCPqFeOo';
   const collectionID = '1459961';
 
   let unsplashRequestURL = `https://api.unsplash.com/collections/${collectionID}/photos?client_id=${unsplashAccessKey}`;
